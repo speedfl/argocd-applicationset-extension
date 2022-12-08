@@ -13,7 +13,7 @@ spec:
   source:
     path: manifests/resources
     repoURL: https://github.com/speedfl/argocd-applicationset-extension.git
-    targetRevision: HEAD
+    targetRevision: master
   syncPolicy:
     automated:
       prune: true
