@@ -12,7 +12,7 @@ spec:
   project: default
   source:
     path: manifests/resources
-    repoURL: https://github.com/speedfl/argocd-applicationset-extension.git
+    repoURL: https://github.com/speedfl/argocd-apps-of-applicationset.git
     targetRevision: master
   syncPolicy:
     automated:
