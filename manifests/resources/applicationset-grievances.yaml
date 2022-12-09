@@ -1,17 +1,25 @@
 apiVersion: argoproj.io/v1alpha1
 kind: ApplicationSet
 metadata:
-  name: guestbook
+  name: grievances
 spec:
   goTemplate: true
   generators:
   - list:
       elements:
-      - cluster: engineering-dev
+      - name: grievances-one
+        url: https://kubernetes.default.svc
+      - name: grievances-two
+        url: https://kubernetes.default.svc
+      - name: grievances-three
+        url: https://kubernetes.default.svc
+      - name: grievances-four
+        url: https://kubernetes.default.svc
+      - name: grievances-five
         url: https://kubernetes.default.svc
   template:
     metadata:
-      name: '{{.cluster}}-guestbook'
+      name: '{{.name}}'
     spec:
       project: default
       source:
@@ -20,4 +28,4 @@ spec:
         path: guestbook
       destination:
         server: '{{.url}}'
-        namespace: guestbook
+        namespace: grievances
