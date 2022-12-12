@@ -21,3 +21,8 @@ spec:
       destination:
         server: '{{.url}}'
         namespace: argocd-e2e
+      syncPolicy:
+        automated:
+          prune: true
+          allowEmpty: true
+          selfHeal: true
