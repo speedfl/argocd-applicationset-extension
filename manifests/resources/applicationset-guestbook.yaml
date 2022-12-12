@@ -20,4 +20,9 @@ spec:
         path: guestbook
       destination:
         server: '{{.url}}'
-        namespace: argocd-e2e
+        namespace: guestbook
+      syncPolicy:
+        automated:
+          prune: true
+          allowEmpty: true
+          selfHeal: true

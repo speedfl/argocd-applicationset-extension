@@ -20,7 +20,7 @@ spec:
         path: guestbook
       destination:
         server: '{{.url}}'
-        namespace: argocd-e2e
+        namespace: grievances
       syncPolicy:
         automated:
           prune: true
